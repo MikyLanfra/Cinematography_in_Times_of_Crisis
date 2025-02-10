@@ -1,5 +1,14 @@
 # Cinematography in Times of Crisis: Exploring the Impact of Global Events on Film Genres and Public Preferences
 
+## Table of Contents
+- [Abstract](#abstract)
+- [Data Story](#data-story-link)
+- [Research Questions](#main-research-questions)
+- [Data Sources](#data-sources)
+- [Data Processing](#data-preparation--cleaning)
+- [Specific Methods](#specific-methods-applied)
+- [Installation and Usage](#installation-and-usage)
+
 ## Abstract
 Cinematography serves as both a reflection of reality and a form of entertainment, adapting to historical, political, economic, and social developments. Over the past century, the world has faced various upheavals, including wars, economic crises, pandemics, and natural disasters. This study investigates how such events have influenced film production and public preferences. 
 
@@ -27,7 +36,6 @@ Questions explored include whether global crises lead to shifts toward various g
 - **Wikipedia Timeline of World Events**: Focuses on 20th and 21st-century crises, including wars, natural disasters, and pandemics, using a zero-shot classifier to categorize events. Positive events are excluded for research focus.
 - **Google Search Trends**: Provides insights into regional interest trends from 2004 onward, offering data for genre popularity analysis related to global crises.
 
-# Methods
 
 ## Data Preparation & Cleaning
 - Wikipedia Timeline was scraped directly from Wikipedia’s website. After cleaning, each entry contained data and a short description of an event. Event types were then added using a pre-trained NLI-based zero-shot text classifier (classes: war, catastrophe, political instability, political resolution, science, technological advancement, natural disaster, pandemics). Positive events were removed to better focus on defined research questions.  
@@ -79,29 +87,15 @@ The summary of the main methods that were used in our analysis is the following:
 - Seasonality decomposition analysis, regression analysis, causality checks
 - Movies characters analysis using semantic analysis
 
-  
-## Team Organization
-Milestone 3 was the time to deepen our analysis and findings. Globally, each team member is responsible for a specific part of the analysis (see below), while merging and ensuring coherence is done collaboratively or in pairs. We hold weekly meetings to refine task distribution. Here is the exact distribution of the tasks between all team members:   
-**Anna**: Question 1.   
-**Binta**: Named Entity Recognition, Entity-Level Sentiment Analysis and website setup.   
-**Michele**: Initial dataset cleaning and filtering, Question 2 (quantitative and comparative analysis of movies in different countries), README.md setup.   
-**Flavia**: War Dataset Research,Question 3: Sentiment Analysis, use of NLP methods for text preparation and NLTK libraries for sentiment analysis.   
-**Aidas**: Question 4; Analysis of genre popularity trends, global events impact analysis for both short-term and long-term trends.   
 
-## Plans and Timeline
-The timeline followed for the project was the following:   
+## Installation and Usage
 
-**Week 1: Refinement**  
-- Align on our strategy: decide whether to build on each other's analyses or pursue independent event selections.  
-- Refine event selection and adjust variables (e.g., years, countries, topics) to uncover more interesting insights.  
-- Clearly state our findings and brainstorm the most effective ways to represent them.  
+To install the project locally, please run the following commands:
 
-**Week 2: Visualization**  
-- plot visualizations to highlight key findings for all research questions.  
-- Strategize how to present the visualizations in a compelling manner, enabling effective comparisons between methods (e.g., sentiment analysis, Google Trends, occurrences).  
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+pip install -r requirements.txt
+```
 
-**Week 3: Presentation Preparation**  
-- Build the website, integrating visualizations and text to create an engaging story.  
-
-**Week 4: Buffer and Feedback**  
-- Seek feedback from the TAs to refine and improve the final data story. 
+The repository contains a [Notebook](Notebook.ipynb) with the code to our data analysis, with the utils functions which can be found in the `src` folder. Similarly, the data used for the project and described above can be found in the `data` folder.
